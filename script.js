@@ -49,15 +49,15 @@ allButtons.forEach((element)=>{
     })
 })
 
-
+inputSection.addEventListener('keydown',(e)=>{
+        e.preventDefault()
+    })
 document.addEventListener('keydown',(event)=>{
     // console.log(event.key);
     let input;
     //event hi prevent hote hai 
     // input bhi value le lega and and ye upar vala function bhi isi liye input ko prevent kiya
-    inputSection.addEventListener('keydown',(e)=>{
-        e.preventDefault()
-    })
+    
     if(event.key=='Enter')
     {
         input=inputSection.value;
