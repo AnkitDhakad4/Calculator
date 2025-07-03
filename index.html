@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="interact">
+            <div id="output"><p><p></p></p>
+            </div>
+            <div id="input">
+                <input type="text" placeholder="0" id="inputSection">
+            </div>
+        </div>
+
+        <div id="buttons">
+            <table>
+
+                <tr>
+                    <td><button class="symbol" value="ClearAll">&#67;</button></td>
+                    <td><button class="symbol" value="/">&divide;</button></td>
+                    <td><button class="symbol" value="*">&times;</button></td>
+                    <td><button class="symbol" value="delete">&lt;</button></td>
+                </tr>
+
+                <tr>
+                    <td><button class="num" value="7">&#55;</button></td>
+                    <td><button class="num" value="8">&#56;</button></td>
+                    <td><button class="num" value="9">&#57</button></td>
+                    <td><button class="symbol" value="-">&minus;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="num" value="4">&#52;</button></td>
+                    <td><button class="num" value="5">&#53;</button></td>
+                    <td><button class="num" value="6">&#54</button></td>
+                    <td><button class="symbol" value="+">&plus;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="num" value="1">&#49;</button></td>
+                    <td><button class="num" value="2">&#50;</button></td>
+                    <td><button class="num" value="3">&#51</button></td>
+                    <td rowspan="2"><button class="special" id="equal" value="equals">&equals;</button></td>
+                </tr>
+                <tr>
+                    <td><button class="num" value="(">(</button></td>
+                    <td><button class="num" value="0">&#48;</button></td>
+                    <td><button class="num" value=")">)</button></td>
+
+                </tr>
+
+`
+
+            </table>
+
+
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
