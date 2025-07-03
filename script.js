@@ -5,9 +5,8 @@ const output=document.querySelector('#output')
 const equal=document.getElementById('equal')
 // console.log(output.value);
 
- 
 // ,'1','2','3','4','5','6','7','8','9','0'
-const symbol=['+','-','/','*','(',')'];
+const symbol=['+','-','/','*','(',')','.'];
 function evaluation(input)
 {
     const p=output.childNodes[0];
@@ -19,7 +18,6 @@ function evaluation(input)
     }
     else
     {
-        
         p.innerHTML=`${ans}`
     }
 }
@@ -51,9 +49,15 @@ allButtons.forEach((element)=>{
     })
 })
 
+
 document.addEventListener('keydown',(event)=>{
     // console.log(event.key);
     let input;
+    //event hi prevent hote hai 
+    // input bhi value le lega and and ye upar vala function bhi isi liye input ko prevent kiya
+    inputSection.addEventListener('keydown',(e)=>{
+        e.preventDefault()
+    })
     if(event.key=='Enter')
     {
         input=inputSection.value;
@@ -61,21 +65,25 @@ document.addEventListener('keydown',(event)=>{
         // console.log(typeof(input));
         evaluation(input);
     }
-    else if(event.key=='delete' || event.key=='Backspace')
+    else if( event.key=='Backspace')
     {
-        if(inputSection.value.length==0)
-        {
-            
-        }
-        else
+        if(!inputSection.value.length==0)
         {
             inputSection.value=inputSection.value.slice(0,-1);
         }
+    }
+    else if(event.key=='Delete')
+    {
+        if(!inputSection.value.length==0)
+        { inputSection.value=''
+        }
+
     }
     else if(!isNaN(event.key) || symbol.includes(event.key))
     {
         inputSection.value+=`${event.key}` 
     }
+
  
 })
 
